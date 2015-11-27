@@ -1,0 +1,25 @@
+﻿<Window x:Class="Anime_Manager.ChooseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Choose Your Destiny" MinHeight="325" MaxHeight="325" MinWidth="412" FontFamily="Segoe UI" Closing="Window_Closing">
+    <Grid>
+        <TextBlock Text="Il apparait qu'il y ait 2 fichiers de configuration qui n'ont les mêmes données." VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10,10,10,0" TextWrapping="Wrap" />
+        <Label Content="Configuration locale :" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,50,0,0" />
+        <TextBox Name="tbox_localConfig" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="25" Margin="170,50,10,0" />
+        <Label Content="Configuration de la session : " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,80,0,0" />
+        <TextBox Name="tbox_appData" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="25" Margin="170,80,10,0" />
+        <GroupBox Header="Que choisissez-vous ?" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,110,0,10">
+            <Grid>
+                <RadioButton Name="rb_useLocal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,18,0,15" />
+                <Label Content="Utiliser la configuration locale" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,10,10,0" />
+                <RadioButton Name="rb_useAppData" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,43,0,15" />
+                <Label Content="Utiliser la configuration de la session" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,35,10,0" />
+                <RadioButton Name="rb_suppAppData" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,68,0,15" />
+                <Label Content="Utiliser la configuration locale et supprimer la configuration de la session" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,60,10,0" />
+                <RadioButton Name="rb_suppLocal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,93,0,15" />
+                <Label Content="Utiliser la configuration de la session et supprimer la configuration locale" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,85,10,0" />
+            </Grid>
+        </GroupBox>
+        <Button Name="btn_ok" Content="OK" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="100" Height="25" BorderBrush="Green" Margin="0,0,0,5" Click="btn_ok_Click" />
+    </Grid>
+</Window>

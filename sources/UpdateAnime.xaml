@@ -1,0 +1,36 @@
+﻿<Window x:Class="Anime_Manager.UpdateAnime"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Modifier un Anime" Height="560" Width="320" FontFamily="Segoe UI" Closing="Window_Closing" Icon="Images/Logo.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Image HorizontalAlignment="Center" Name="img_background" Stretch="UniformToFill" VerticalAlignment="Center" />
+        <Rectangle HorizontalAlignment="Stretch" Margin="0,30,0,35" Name="rect" Stroke="White" VerticalAlignment="Stretch" Fill="White" Opacity="0.1"/>
+        <Label Content="Modifier un Anime" FontFamily="Chinyen" Foreground="White" Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" />
+        <GroupBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,35" MouseEnter="GroupBox_MouseEnter" MouseLeave="GroupBox_MouseLeave" GotFocus="GroupBox_GotFocus">
+            <Grid>
+                <Label Content="Nom : " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="6,40,0,0" FontWeight="Bold"/>
+                <TextBox Name="tbox_name" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190" Height="25" Margin="0,40,6,0" IsEnabled="False"/>
+                <Label Content="Saison :" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="6,70,0,0" FontWeight="Bold"/>
+                <TextBox Name="tbox_season" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190" Height="25" Margin="0,70,6,0" IsEnabled="False"/>
+                <Label Content="Studio :" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="6,100,0,0" FontWeight="Bold"/>
+                <TextBox Name="tbox_studio" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190" Height="25" Margin="0,100,6,0" />
+                <Label Content="Fansub(s) :" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="6,130,0,0" FontWeight="Bold"/>
+                <TextBox Name="tbox_fansubs" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190" Height="25" Margin="0,130,6,0" />
+                <Label Content="Langue :" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="6,160,0,0" FontWeight="Bold"/>
+                <ComboBox Name="cbox_language" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190" Height="25" Margin="0,160,6,0" Background="White" IsEditable="True" IsEnabled="False"/>
+                <Label Content="Sous-Titres :" VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold" Margin="6,190,0,0" />
+                <ComboBox Name="cbox_sub" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190" Height="25" Margin="0,190,6,0" Background="White" IsEditable="True" IsEnabled="False"/>
+                <Label Content="Genre : " VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold" Margin="6,220,0,0" />
+                <TextBox Name="tbox_type" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190" Height="25" Margin="0,220,6,0" />
+                <Label Content="Année : " VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold" Margin="6,250,0,0" />
+                <TextBox Name="tbox_year" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190" Height="25" Margin="0,250,6,0" TextChanged="tbox_year_TextChanged" />
+                <Label Content="Synopsis / Résumé : " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="6,280,0,0" FontWeight="Bold"/>
+                <TextBox Name="tbox_synopsis" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="6,310,6,36" TextWrapping="Wrap" TextChanged="tbox_synopsis_TextChanged" />
+                <Label Name="lbl_count" Content="1000" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,6,6" Opacity="0.4"/>
+                <Button Name="btn_changeBack" Content="Change Background" FontFamily="Chinyen" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" Opacity="0.1" MouseEnter="btn_changeBack_MouseEnter" MouseLeave="btn_changeBack_MouseLeave" Click="btn_changeBack_Click" />
+            </Grid>
+        </GroupBox>
+        <Button Name="btn_update" Content="Modifier" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="150" Height="25" FontFamily="Chinyen" BorderBrush="Orange" Opacity="0.3" Margin="0,0,0,5" MouseEnter="btn_update_MouseEnter" MouseLeave="btn_update_MouseLeave" Click="btn_update_Click"/>
+    </Grid>
+</Window>

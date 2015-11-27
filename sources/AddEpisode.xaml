@@ -1,0 +1,18 @@
+﻿<Window x:Class="Anime_Manager.AddEpisode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ajouter un épisode" Height="254" Width="329" ResizeMode="NoResize" Icon="Images/Logo.png" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+        <Image HorizontalAlignment="Center" Name="img_background" Stretch="UniformToFill" VerticalAlignment="Center" />
+        <Label Content="Ajouter un Anime" FontFamily="Chinyen" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Black" Foreground="White" FontSize="20" />
+        <Button Name="btn_changeBack" Content="Change Background" FontFamily="Chinyen" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,35,0,0" Opacity="0.1" MouseEnter="btn_changeBack_MouseEnter" MouseLeave="btn_changeBack_MouseLeave" Click="btn_changeBack_Click" />
+        <Rectangle Name="rct" Fill="White" Opacity="0.3" HorizontalAlignment="Center" Width="264" VerticalAlignment="Top" Height="25" Margin="15,60,28,0" MouseEnter="fadeOne" MouseLeave="fadeTwo"/>
+        <Label Name="lbl" Content="Numéro/Nom :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,60,0,0" Opacity="0.3" MouseEnter="fadeOne" MouseLeave="fadeTwo" />
+        <TextBox Name="tbox_num" ToolTip="Entrez un nombre ou 'OAV/OVA/... numéro'" HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="176" Margin="0,60,15,0" Opacity="0.3" MouseEnter="fadeOne" MouseLeave="fadeTwo"/>
+        
+        <TextBox Name="tbox_path" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="241" Margin="15,100,0,0" MouseEnter="tbox_path_MouseEnter" MouseLeave="tbox_path_MouseLeave" Opacity="0.5"/>
+        <Button Name="btn_search" Content="..." HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="Turquoise" Height="25" Width="30" Margin="0,100,15,0" MouseEnter="btn_search_MouseEnter" MouseLeave="btn_search_MouseLeave" Opacity="0.5" Click="btn_search_Click" />
+        
+        <Button Name="btn_ajouter" Content="Ajouter" BorderBrush="Green" VerticalAlignment="Top" HorizontalAlignment="Center" Height="25" Width="150" Margin="0,150,0,0" Opacity="0.5" MouseEnter="btn_ajouter_MouseEnter" MouseLeave="btn_ajouter_MouseLeave" Click="btn_ajouter_Click" />
+    </Grid>
+</Window>
